@@ -1,5 +1,5 @@
 <?php
 
-$greeting = "Hello, World";
+$names = ['islam', 'ahmed', 'mohamed'];
 
 require 'index.view.php';
