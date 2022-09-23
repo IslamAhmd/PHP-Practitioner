@@ -1,5 +1,7 @@
 <?php
 
+require 'functions.php';
+
 $names = ['islam', 'ahmed', 'khaled', 'mohsen', 'saad'];
 $task = [
     'title' => 'finish work',
@@ -8,4 +10,5 @@ $task = [
     'completed' => false
 ];
 
-require 'index.view.php';
+echo checkAge(22)? (1==2?'allowed' : 'not allowed') : 'not allowed';
+// require 'index.view.php';
