@@ -2,13 +2,49 @@
 
 require 'functions.php';
 
-$names = ['islam', 'ahmed', 'khaled', 'mohsen', 'saad'];
-$task = [
-    'title' => 'finish work',
-    'due' => 'today',
-    'assigned_to' => 'islam',
-    'completed' => false
+class Task {
+
+    public $title;
+    
+    public $description;
+
+    public $completed = false;
+
+    public function __construct($title, $description)
+    {
+        
+        $this->title = $title;
+
+        $this->description = $description;
+
+    }
+
+    public function completeTask()
+    {
+
+        $this->completed = true;
+
+    }
+
+    public function isCompleted()
+    {
+        
+        return $this->completed;
+
+    }
+
+}
+
+$tasks = [
+
+    new Task('work', 'finish work'),
+
+    new Task('home work', 'finish home work'),
+
+    new Task('break', 'take a break'),
+
 ];
 
-echo checkAge(22)? (1==2?'allowed' : 'not allowed') : 'not allowed';
-// require 'index.view.php';
+$tasks[0]->completeTask();
+
+require 'index.view.php';
